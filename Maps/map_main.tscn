@@ -28,4 +28,4 @@ environment = SubResource("Environment_mktg1")
 [node name="ArenaMain" parent="." unique_id=1776905858 instance=ExtResource("1_jvluu")]
 
 [node name="Player" parent="." unique_id=65660136 instance=ExtResource("2_mktg1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.7606382, 45.02008)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6951053, 45.02008)
