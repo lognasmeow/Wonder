@@ -1012,12 +1012,6 @@ operation = 2
 size = Vector3(5, 5, 5)
 material = ExtResource("1_0u2aa")
 
-[node name="CSGBox3DSubtractive163" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1731135190]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.861761, 1.9073486e-06, -136.05605)
-operation = 2
-size = Vector3(5, 5, 5)
-material = ExtResource("1_0u2aa")
-
 [node name="CSGBox3DSubtractive164" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1292681435]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5155735, 1.9073486e-06, -134.6898)
 operation = 2
@@ -1762,12 +1756,6 @@ operation = 2
 size = Vector3(5, 5, 5)
 material = ExtResource("1_0u2aa")
 
-[node name="CSGBox3DSubtractive288" type="CSGBox3D" parent="CSGCombiner3D" unique_id=856913790]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.417955, -1.9644403, -142.12813)
-operation = 2
-size = Vector3(5, 5, 5)
-material = ExtResource("1_0u2aa")
-
 [node name="CSGBox3DSubtractive289" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1021534184]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.137241, -1.9073486e-06, -95.58371)
 operation = 2
@@ -1786,12 +1774,6 @@ operation = 2
 size = Vector3(5, 5, 5)
 material = ExtResource("1_0u2aa")
 
-[node name="CSGBox3DSubtractive292" type="CSGBox3D" parent="CSGCombiner3D" unique_id=698351571]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.068453, 1.9073486e-06, -142.5036)
-operation = 2
-size = Vector3(5, 5, 5)
-material = ExtResource("1_0u2aa")
-
 [node name="CSGBox3DSubtractive293" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1310302934]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5927906, 1.9073486e-06, -129.51833)
 operation = 2
@@ -1800,24 +1782,6 @@ material = ExtResource("1_0u2aa")
 
 [node name="CSGBox3DSubtractive294" type="CSGBox3D" parent="CSGCombiner3D" unique_id=259432646]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5927906, 1.9073486e-06, -129.51833)
-operation = 2
-size = Vector3(5, 5, 5)
-material = ExtResource("1_0u2aa")
-
-[node name="CSGBox3DSubtractive295" type="CSGBox3D" parent="CSGCombiner3D" unique_id=2143616823]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.531042, 1.9073486e-06, -137.66911)
-operation = 2
-size = Vector3(5, 5, 5)
-material = ExtResource("1_0u2aa")
-
-[node name="CSGBox3DSubtractive296" type="CSGBox3D" parent="CSGCombiner3D" unique_id=566047100]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6535988, 1.9073486e-06, -147.30003)
-operation = 2
-size = Vector3(5, 5, 5)
-material = ExtResource("1_0u2aa")
-
-[node name="CSGBox3DSubtractive297" type="CSGBox3D" parent="CSGCombiner3D" unique_id=2097554276]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.219387, 1.9073486e-06, -149.97964)
 operation = 2
 size = Vector3(5, 5, 5)
 material = ExtResource("1_0u2aa")
@@ -1894,12 +1858,6 @@ operation = 2
 size = Vector3(5, 5, 5)
 material = ExtResource("1_0u2aa")
 
-[node name="CSGBox3DSubtractive310" type="CSGBox3D" parent="CSGCombiner3D" unique_id=45628081]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.059586, 1.9073486e-06, -149.55347)
-operation = 2
-size = Vector3(5, 5, 5)
-material = ExtResource("1_0u2aa")
-
 [node name="CSGBox3DSubtractive311" type="CSGBox3D" parent="CSGCombiner3D" unique_id=480015599]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.033073, 1.9073486e-06, -86.52277)
 operation = 2
@@ -1954,26 +1912,8 @@ operation = 2
 size = Vector3(5, 5, 5)
 material = ExtResource("1_0u2aa")
 
-[node name="CSGBox3DSubtractive320" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1829822782]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.7261, 1.9073486e-06, -139.12076)
-operation = 2
-size = Vector3(5, 5, 5)
-material = ExtResource("1_0u2aa")
-
 [node name="CSGBox3DSubtractive321" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1369533762]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.747185, 1.9073486e-06, -134.91771)
-operation = 2
-size = Vector3(5, 5, 5)
-material = ExtResource("1_0u2aa")
-
-[node name="CSGBox3DSubtractive322" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1286062289]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.298546, 1.9073486e-06, -139.90752)
-operation = 2
-size = Vector3(5, 5, 5)
-material = ExtResource("1_0u2aa")
-
-[node name="CSGBox3DSubtractive323" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1902109439]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.7441883, 1.9073486e-06, -145.04694)
 operation = 2
 size = Vector3(5, 5, 5)
 material = ExtResource("1_0u2aa")
@@ -2098,62 +2038,14 @@ operation = 2
 size = Vector3(5, 5, 5)
 material = ExtResource("1_0u2aa")
 
-[node name="CSGBox3DSubtractive344" type="CSGBox3D" parent="CSGCombiner3D" unique_id=673243568]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.993809, 1.9073486e-06, -139.22247)
-operation = 2
-size = Vector3(5, 5, 5)
-material = ExtResource("1_0u2aa")
-
 [node name="CSGBox3DSubtractive345" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1456878316]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.900826, 1.9073486e-06, -131.74396)
 operation = 2
 size = Vector3(5, 5, 5)
 material = ExtResource("1_0u2aa")
 
-[node name="CSGBox3DSubtractive346" type="CSGBox3D" parent="CSGCombiner3D" unique_id=976886270]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.415947, 1.9073486e-06, -148.14783)
-operation = 2
-size = Vector3(5, 5, 5)
-material = ExtResource("1_0u2aa")
-
-[node name="CSGBox3DSubtractive347" type="CSGBox3D" parent="CSGCombiner3D" unique_id=590710692]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.556632, 1.9073486e-06, -144.28601)
-operation = 2
-size = Vector3(5, 5, 5)
-material = ExtResource("1_0u2aa")
-
-[node name="CSGBox3DSubtractive348" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1995607447]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.680294, 1.9073486e-06, -146.5439)
-operation = 2
-size = Vector3(5, 5, 5)
-material = ExtResource("1_0u2aa")
-
-[node name="CSGBox3DSubtractive349" type="CSGBox3D" parent="CSGCombiner3D" unique_id=705751934]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.861761, 1.9073486e-06, -155.74725)
-operation = 2
-size = Vector3(5, 5, 5)
-material = ExtResource("1_0u2aa")
-
-[node name="CSGBox3DSubtractive350" type="CSGBox3D" parent="CSGCombiner3D" unique_id=65313160]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5155735, 1.9073486e-06, -154.38101)
-operation = 2
-size = Vector3(5, 5, 5)
-material = ExtResource("1_0u2aa")
-
-[node name="CSGBox3DSubtractive351" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1820510291]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.818851, 1.9073486e-06, -149.87555)
-operation = 2
-size = Vector3(5, 5, 5)
-material = ExtResource("1_0u2aa")
-
 [node name="CSGBox3DSubtractive352" type="CSGBox3D" parent="CSGCombiner3D" unique_id=865446598]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.611958, 1.9073486e-06, -155.11261)
-operation = 2
-size = Vector3(5, 5, 5)
-material = ExtResource("1_0u2aa")
-
-[node name="CSGBox3DSubtractive353" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1486571475]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.206562, -1.982563, -150.43057)
 operation = 2
 size = Vector3(5, 5, 5)
 material = ExtResource("1_0u2aa")
