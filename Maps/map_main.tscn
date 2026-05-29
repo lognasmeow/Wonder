@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://b57ptewcyhlft"]
 
+[ext_resource type="PackedScene" uid="uid://6vki3n4jw28r" path="res://Assets/Models/Arenas/arena_main.tscn" id="1_jvluu"]
+
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0nho3"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
 ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -16,8 +18,10 @@ glow_enabled = true
 [node name="MapMain" type="Node3D" unique_id=1293976605]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=312650139]
-transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+transform = Transform3D(-0.96499366, -0.22713551, 0.1311367, 2.7805946e-08, 0.49999994, 0.86602545, -0.26227343, 0.835709, -0.4824968, 0, 9.107522, 0)
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=867629201]
 environment = SubResource("Environment_mktg1")
+
+[node name="ArenaMain" parent="." unique_id=1776905858 instance=ExtResource("1_jvluu")]
