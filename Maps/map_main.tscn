@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b57ptewcyhlft"]
 
 [ext_resource type="PackedScene" uid="uid://6vki3n4jw28r" path="res://Assets/Models/Arenas/arena_main.tscn" id="1_jvluu"]
+[ext_resource type="PackedScene" uid="uid://db7q0vfge37iu" path="res://Player/player.tscn" id="2_mktg1"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0nho3"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -25,3 +26,6 @@ shadow_enabled = true
 environment = SubResource("Environment_mktg1")
 
 [node name="ArenaMain" parent="." unique_id=1776905858 instance=ExtResource("1_jvluu")]
+
+[node name="Player" parent="." unique_id=65660136 instance=ExtResource("2_mktg1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.7606382, 45.02008)

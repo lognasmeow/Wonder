@@ -5,6 +5,7 @@
 [node name="ArenaMain" type="Node3D" unique_id=1776905858]
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=569332522]
+use_collision = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1457683260]
 size = Vector3(100, 1, 100)
