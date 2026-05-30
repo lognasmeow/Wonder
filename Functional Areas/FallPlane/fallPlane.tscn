@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dnmj8afkcdxkx"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_antgw"]
+
+[node name="FallPlane" type="Area3D" unique_id=510512870]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1761711487]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, 0, 0)
+shape = SubResource("WorldBoundaryShape3D_antgw")

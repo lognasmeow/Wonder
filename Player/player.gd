@@ -1,9 +1,10 @@
 extends CharacterBody3D
 
-
 const SPEED = 8.0
 const JUMP_VELOCITY = 15
 
+signal enteredFallPlane
+signal enteredFinishLine
 
 func _physics_process(delta):
 	addGravity(delta)
@@ -28,3 +29,11 @@ func handleMove() -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
+
+
+func _on_fall_plane_body_entered(_body):
+	enteredFallPlane.emit()
+
+
+func _on_area_finish_line_body_entered(body):
+	enteredFinishLine.emit()
