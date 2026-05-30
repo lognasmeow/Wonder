@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bo5sk5sxyv5s6"]
+
+[ext_resource type="Script" uid="uid://btafqef6sihar" path="res://Modifiers/InvertedMouse/mod_inverted_mouse.gd" id="1_bgoyq"]
+
+[node name="ModInvertedMouse" type="Node3D" unique_id=936120742]
+script = ExtResource("1_bgoyq")

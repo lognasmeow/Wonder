@@ -24,6 +24,7 @@ Modifiers="*uid://c7ilfv3xrl4ro"
 
 window/size/viewport_width=640
 window/size/viewport_height=480
+window/size/mode=3
 window/stretch/mode="viewport"
 
 [input]

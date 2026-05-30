@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://chjddqk1d0ugm"]
+
+[ext_resource type="Script" uid="uid://cr2g3d3divxa4" path="res://Modifiers/IcyFloor/mod_icy_floor.gd" id="1_4df58"]
+
+[node name="ModIcyFloor" type="Node3D" unique_id=619040519]
+script = ExtResource("1_4df58")
