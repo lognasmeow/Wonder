@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bf8fsvj7nq76s"]
+
+[ext_resource type="Script" uid="uid://d6kw0ild52ud" path="res://Modifiers/InvertedWalking/mod_inverted_walking.gd" id="1_yumhx"]
+
+[node name="ModInvertedWalking" type="Node3D" unique_id=1019954106]
+script = ExtResource("1_yumhx")

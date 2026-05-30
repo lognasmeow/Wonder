@@ -27,3 +27,5 @@ func _on_player_entered_finish_line():
 	await get_tree().create_timer(0.5).timeout
 	var temp = preload("res://Modifiers/DoubleJumpHeight/Mod_DoubleJumpHeight.tscn").instantiate()
 	add_child(temp)
+	var temp2 = preload("res://Modifiers/InvertedWalking/Mod_InvertedWalking.tscn").instantiate()
+	add_child(temp2)
