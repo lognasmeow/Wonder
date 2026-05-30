@@ -16,6 +16,10 @@ config/features=PackedStringArray("4.6", "Forward Plus")
 run/max_fps=60
 config/icon="res://icon.svg"
 
+[autoload]
+
+Modifiers="*uid://c7ilfv3xrl4ro"
+
 [display]
 
 window/size/viewport_width=640

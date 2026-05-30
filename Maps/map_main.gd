@@ -15,6 +15,7 @@ func _ready():
 func _on_player_entered_fall_plane():
 	transitioningOut.emit()
 	await get_tree().create_timer(1.0).timeout
+	Modifiers.resetModifiers()
 	get_tree().reload_current_scene()
 
 
@@ -24,3 +25,5 @@ func _on_player_entered_finish_line():
 	player.global_position = playerSpawnPoint.global_position
 	transitioningIn.emit()
 	await get_tree().create_timer(0.5).timeout
+	var temp = preload("res://Modifiers/DoubleJumpHeight/Mod_DoubleJumpHeight.tscn").instantiate()
+	add_child(temp)
