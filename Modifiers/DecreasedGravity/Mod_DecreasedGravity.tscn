@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://ddtwrhqml8rmv"]
+
+[ext_resource type="Script" uid="uid://ci8ku6w2206ge" path="res://Modifiers/DecreasedGravity/mod_decreased_gravity.gd" id="1_32i3b"]
+
+[node name="ModDecreasedGravity" type="Node3D" unique_id=272052426]
+script = ExtResource("1_32i3b")

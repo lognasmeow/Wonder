@@ -14,7 +14,7 @@ func _physics_process(delta):
 
 func addGravity(delta: float) -> void:
 	if not is_on_floor():
-		velocity += (get_gravity() * 4) * delta
+		velocity += ((get_gravity() * 4) * Modifiers.gravityMultiplier) * delta
 
 func handleJump() -> void:
 	if Input.is_action_just_pressed("jump") and is_on_floor():

@@ -4,6 +4,7 @@ var jumpHeightMultiplier: float
 var invertedWalking: bool
 var invertedMouse: bool
 var floorIciness: float
+var gravityMultiplier: float
 
 var modifierPaths: Array
 
@@ -16,6 +17,7 @@ func resetModifiers() -> void:
 	invertedWalking = false
 	invertedMouse = false
 	floorIciness = 1
+	gravityMultiplier = 1
 
 func resetModifierPaths() -> void:
 	modifierPaths.clear()
@@ -23,5 +25,6 @@ func resetModifierPaths() -> void:
 					"res://Modifiers/InvertedWalking/Mod_InvertedWalking.tscn",
 					"res://Modifiers/InvertedMouse/Mod_InvertedMouse.tscn",
 					"res://Modifiers/IcyFloor/Mod_IcyFloor.tscn",
+					"res://Modifiers/DecreasedGravity/Mod_DecreasedGravity.tscn"
 					]
 	
