@@ -1,3 +1,6 @@
 [gd_scene format=3 uid="uid://c78sv702v8sjf"]
 
+[ext_resource type="Script" uid="uid://f312fqguwhgj" path="res://Modifiers/Cows/mod_cows.gd" id="1_u3jdu"]
+
 [node name="ModCows" type="Node3D" unique_id=554281923]
+script = ExtResource("1_u3jdu")
