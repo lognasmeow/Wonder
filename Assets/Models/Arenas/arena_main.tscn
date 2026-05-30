@@ -2158,3 +2158,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.205894, 1.9073486e-06, -1
 operation = 2
 size = Vector3(5, 5, 5)
 material = ExtResource("1_0u2aa")
+
+[node name="CSGBox3DSubtractive288" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1697257880]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.796097, -32.75515, -48.537754)
+operation = 2
+size = Vector3(103.230865, 64.36719, 216.88211)
+material = ExtResource("1_0u2aa")
