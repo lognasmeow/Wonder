@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b7ueai68mlg27" path="res://Functional Areas/FinishLine/Area_FinishLine.tscn" id="6_rhhk7"]
 [ext_resource type="PackedScene" uid="uid://crhtgwpy542xa" path="res://Assets/Models/Finish Line/finishLine.tscn" id="7_uov7h"]
 [ext_resource type="PackedScene" uid="uid://bb4grpuxtpb3k" path="res://UI/Transitions/FadeCircle/FadeCircle.tscn" id="8_0in5n"]
+[ext_resource type="PackedScene" uid="uid://dchop0jx8s5vx" path="res://Assets/Models/Cow/cow.tscn" id="9_m4ext"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_1q4cs"]
 panorama = ExtResource("1_jf03b")
@@ -60,6 +61,8 @@ offset_right = 640.0
 offset_bottom = 480.0
 
 [node name="FadeCircle" parent="UI" unique_id=442821733 instance=ExtResource("8_0in5n")]
+
+[node name="Cow" parent="." unique_id=203411567 instance=ExtResource("9_m4ext")]
 
 [connection signal="transitioningIn" from="." to="UI/FadeCircle" method="_on_map_main_transitioning_in"]
 [connection signal="transitioningOut" from="." to="UI/FadeCircle" method="_on_map_main_transitioning_out"]
