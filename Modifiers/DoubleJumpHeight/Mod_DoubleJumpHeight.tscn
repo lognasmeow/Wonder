@@ -1,6 +1,0 @@
-[gd_scene format=3 uid="uid://c0clypnpgiqoi"]
-
-[ext_resource type="Script" uid="uid://dmcg7txam74j" path="res://Modifiers/DoubleJumpHeight/mod_double_jump_height.gd" id="1_61eih"]
-
-[node name="ModDoubleJumpHeight" type="Node3D" unique_id=1318827636]
-script = ExtResource("1_61eih")
