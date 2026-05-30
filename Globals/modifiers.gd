@@ -19,8 +19,9 @@ func resetModifiers() -> void:
 
 func resetModifierPaths() -> void:
 	modifierPaths.clear()
-	modifierPaths = ["res://Modifiers/DoubleJumpHeight/Mod_IncreasedJumpHeight.tscn",
+	modifierPaths = ["res://Modifiers/IncreasedJumpHeight/Mod_IncreasedJumpHeight.tscn",
 					"res://Modifiers/InvertedWalking/Mod_InvertedWalking.tscn",
-					"res://Modifiers/InvertedWalking/Mod_InvertedMouse.tscn",
-					"res://Modifiers/InvertedWalking/Mod_IcyFloor.tscn",
+					"res://Modifiers/InvertedMouse/Mod_InvertedMouse.tscn",
+					"res://Modifiers/IcyFloor/Mod_IcyFloor.tscn",
 					]
+	
