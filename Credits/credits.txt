@@ -1,2 +1,6 @@
 *** SHADERS ***
 - pxlforge (https://godotshaders.com/shader/lightweight-crt-effect/)
+
+*** HDRIs ***
+- Dimitrios Savva (https://polyhaven.com/a/ferndale_studio_12)
+- Greg Zaal (https://polyhaven.com/a/ferndale_studio_12)
