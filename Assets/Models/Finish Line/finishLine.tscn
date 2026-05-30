@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://crhtgwpy542xa"]
+
+[ext_resource type="PackedScene" uid="uid://pj3heif4guyd" path="res://Assets/Models/Finish Line/finish_line.glb" id="1_g2hf4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g2hf4"]
+size = Vector3(1.0684814, 4.5126953, 1.0405273)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7pu2u"]
+size = Vector3(13.088318, 1.0601807, 0.115600586)
+
+[node name="FinishLineModel" unique_id=1955813330 instance=ExtResource("1_g2hf4")]
+
+[node name="Sketchfab_model" parent="." index="0" unique_id=1571016097]
+transform = Transform3D(4.1, 0, 0, 0, -1.7484555e-07, 6, 0, -4, -2.6226832e-07, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_model/bf0bdf6dbd1e48fb8e27044e64b28c64_fbx/RootNode/pole_001/pole_001_Metal_0" parent_id_path=PackedInt32Array(645118235) index="0" unique_id=2011851843]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.09317, 0.30052245, 0.008894457)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/bf0bdf6dbd1e48fb8e27044e64b28c64_fbx/RootNode/pole_001/pole_001_Metal_0/StaticBody3D" index="0" unique_id=548443795]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.034240723, 1.7563475, -0.020263672)
+shape = SubResource("BoxShape3D_g2hf4")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="Sketchfab_model/bf0bdf6dbd1e48fb8e27044e64b28c64_fbx/RootNode/pole_001/pole_001_Metal_0" parent_id_path=PackedInt32Array(645118235) index="1" unique_id=1894534977]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.023725, 0.30052245, 0.008894457)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/bf0bdf6dbd1e48fb8e27044e64b28c64_fbx/RootNode/pole_001/pole_001_Metal_0/StaticBody3D2" index="0" unique_id=992862880]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.034240723, 1.7563475, -0.020263672)
+shape = SubResource("BoxShape3D_g2hf4")
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="Sketchfab_model/bf0bdf6dbd1e48fb8e27044e64b28c64_fbx/RootNode/pole_001/pole_001_Metal_0" parent_id_path=PackedInt32Array(645118235) index="2" unique_id=769745869]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5214818, 1.5392885e-07)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/bf0bdf6dbd1e48fb8e27044e64b28c64_fbx/RootNode/pole_001/pole_001_Metal_0/StaticBody3D3" index="0" unique_id=900415036]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.004425049, -0.08026123, 0.416687)
+shape = SubResource("BoxShape3D_7pu2u")

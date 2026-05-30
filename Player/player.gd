@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-const SPEED = 8.0
+const SPEED = 20.0
 const JUMP_VELOCITY = 15
 
 signal enteredFallPlane
@@ -36,4 +36,4 @@ func _on_fall_plane_body_entered(_body):
 
 
 func _on_area_finish_line_body_entered(_body):
-	enteredFinishLine.emit()
+	enteredFallPlane.emit()

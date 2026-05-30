@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://db7q0vfge37iu" path="res://Player/player.tscn" id="2_mktg1"]
 [ext_resource type="PackedScene" uid="uid://dnmj8afkcdxkx" path="res://Functional Areas/FallPlane/fallPlane.tscn" id="5_3721q"]
 [ext_resource type="PackedScene" uid="uid://b7ueai68mlg27" path="res://Functional Areas/FinishLine/Area_FinishLine.tscn" id="6_rhhk7"]
+[ext_resource type="PackedScene" uid="uid://crhtgwpy542xa" path="res://Assets/Models/Finish Line/finishLine.tscn" id="7_uov7h"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_1q4cs"]
 panorama = ExtResource("1_jf03b")
@@ -43,10 +44,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6785837, 45.02707)
 [node name="FallPlane" parent="." unique_id=510512870 instance=ExtResource("5_3721q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.2877274, -51.90043)
 
-[node name="AreaFinishLine" parent="." unique_id=1843727942 instance=ExtResource("6_rhhk7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 22.991291, -140.32568)
+[node name="FinishLine" type="Node3D" parent="." unique_id=1879886457]
+
+[node name="AreaFinishLine" parent="FinishLine" unique_id=1843727942 instance=ExtResource("6_rhhk7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 22.991291, -141.70592)
+
+[node name="FinishLineModel" parent="FinishLine" unique_id=1955813330 instance=ExtResource("7_uov7h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9686413, -141.77754)
 
 [connection signal="enteredFallPlane" from="Player" to="." method="_on_player_entered_fall_plane"]
 [connection signal="enteredFinishLine" from="Player" to="." method="_on_player_entered_finish_line"]
 [connection signal="body_entered" from="FallPlane" to="Player" method="_on_fall_plane_body_entered"]
-[connection signal="body_entered" from="AreaFinishLine" to="Player" method="_on_area_finish_line_body_entered"]
+[connection signal="body_entered" from="FinishLine/AreaFinishLine" to="Player" method="_on_area_finish_line_body_entered"]
