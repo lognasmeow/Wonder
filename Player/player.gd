@@ -36,4 +36,4 @@ func _on_fall_plane_body_entered(_body):
 
 
 func _on_area_finish_line_body_entered(_body):
-	enteredFallPlane.emit()
+	enteredFinishLine.emit()
