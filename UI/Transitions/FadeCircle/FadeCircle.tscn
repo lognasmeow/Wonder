@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://bb4grpuxtpb3k"]
+
+[ext_resource type="Script" uid="uid://81fgvvw1mdcu" path="res://UI/Transitions/FadeCircle/fade_circle.gd" id="1_dljto"]
+[ext_resource type="Shader" uid="uid://dycflfidfk6x0" path="res://Assets/Shaders/fadeCircle.gdshader" id="1_i5cpx"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dljto"]
+shader = ExtResource("1_i5cpx")
+shader_parameter/circle_size = 0.90000004275
+shader_parameter/screen_aspect = 1.3000000584901201
+
+[sub_resource type="Animation" id="Animation_trr4v"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/circle_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.90000004275]
+}
+
+[sub_resource type="Animation" id="Animation_q0cio"]
+resource_name = "fadeIn"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/circle_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.89999997615814]
+}
+
+[sub_resource type="Animation" id="Animation_dljto"]
+resource_name = "fadeOut"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/circle_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.90000004275, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_trr4v"]
+_data = {
+&"RESET": SubResource("Animation_trr4v"),
+&"fadeIn": SubResource("Animation_q0cio"),
+&"fadeOut": SubResource("Animation_dljto")
+}
+
+[node name="FadeCircle" type="CanvasLayer" unique_id=442821733]
+script = ExtResource("1_dljto")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=41129232]
+material = SubResource("ShaderMaterial_dljto")
+offset_right = 640.0
+offset_bottom = 480.0
+mouse_filter = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1583563739]
+libraries/ = SubResource("AnimationLibrary_trr4v")

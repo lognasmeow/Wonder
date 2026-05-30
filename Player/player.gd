@@ -31,9 +31,11 @@ func handleMove() -> void:
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 
-func _on_fall_plane_body_entered(_body):
-	enteredFallPlane.emit()
+func _on_fall_plane_body_entered(body):
+	if (body.name == "Player"):
+		enteredFallPlane.emit()
 
 
-func _on_area_finish_line_body_entered(_body):
-	enteredFinishLine.emit()
+func _on_area_finish_line_body_entered(body):
+	if (body.name == "Player"):
+		enteredFinishLine.emit()
