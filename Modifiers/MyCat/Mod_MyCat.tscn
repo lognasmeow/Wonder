@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://473iesmsu8nw"]
+
+[ext_resource type="Script" uid="uid://dnhhytriwbo05" path="res://Modifiers/MyCat/mod_my_cat.gd" id="1_w81bj"]
+[ext_resource type="AudioStream" uid="uid://n2mai7uc7rdt" path="res://Assets/Audio/Sound Effects/Meow/munchyMeow.wav" id="2_627nw"]
+[ext_resource type="Texture2D" uid="uid://by0m7nw25ftbv" path="res://Assets/Images/munchy1.png" id="3_i2wrj"]
+[ext_resource type="Texture2D" uid="uid://c1pc8aioic1y0" path="res://Assets/Images/munchy2.png" id="4_tex1b"]
+
+[node name="ModMyCat" type="Node3D" unique_id=155435493]
+script = ExtResource("1_w81bj")
+
+[node name="Timer" type="Timer" parent="." unique_id=10162488]
+wait_time = 4.0
+autostart = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2066608993]
+stream = ExtResource("2_627nw")
+
+[node name="SpriteMunchy1" type="Sprite2D" parent="." unique_id=2090375325]
+position = Vector2(70, 65)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_i2wrj")
+
+[node name="SpriteMunchy2" type="Sprite2D" parent="." unique_id=1754851591]
+visible = false
+position = Vector2(70, 65)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_tex1b")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

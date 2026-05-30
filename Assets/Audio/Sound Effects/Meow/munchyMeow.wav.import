@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://n2mai7uc7rdt"
+path="res://.godot/imported/munchyMeow.wav-1f57b7550a7a42e3281d04d4eecb9db9.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Sound Effects/Meow/munchyMeow.wav"
+dest_files=["res://.godot/imported/munchyMeow.wav-1f57b7550a7a42e3281d04d4eecb9db9.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
