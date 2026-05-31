@@ -9,7 +9,6 @@ signal transitioningOut
 signal transitioningIn
 
 func _ready():
-	spawnObjects("res://Assets/Models/Cow/cow.tscn", 10)
 	connectModifierSignals()
 	player.global_position = playerSpawnPoint.global_position
 	transitioningIn.emit()
@@ -18,17 +17,23 @@ func _ready():
 func connectModifierSignals() -> void:
 	EventBus.modifierAdded.connect(_on_modifier_added)
 	
-func spawnObjects(objectPath: String, amountToSpawn: int) -> void:
+func spawnObjects(objectPath: String, amountToSpawn: int, scaleModifier: float) -> void:
 	var objectToSpawn = load(objectPath)
 	for i in range(amountToSpawn):
 		var instantiatedObject = objectToSpawn.instantiate()
-		
-		var randomXLocation = randf_range(objectCorner1.global_position.x, objectCorner2.global_position.x)
-		var randomZLocation = randf_range(objectCorner1.global_position.z, objectCorner2.global_position.z)
-		var yLocation = playerSpawnPoint.global_position.y
-		
-		instantiatedObject.global_position = Vector3(randomXLocation, yLocation, randomZLocation)
 		add_child(instantiatedObject)
+		
+		var randomXLocation: float = randf_range(objectCorner1.global_position.x, objectCorner2.global_position.x)
+		var randomZLocation: float = randf_range(objectCorner1.global_position.z, objectCorner2.global_position.z)
+		var yLocation: float = playerSpawnPoint.global_position.y
+		instantiatedObject.global_position = Vector3(randomXLocation, yLocation, randomZLocation)
+		
+		var randomScaleAmount: float = randf_range(1.0, scaleModifier)
+		instantiatedObject.scale.x = randomScaleAmount
+		instantiatedObject.scale.y = randomScaleAmount
+		instantiatedObject.scale.z = randomScaleAmount
+		
+		instantiatedObject.rotation.y = deg_to_rad(randf_range(0.0, 360.0))
 
 
 func _on_player_entered_fall_plane():
@@ -47,8 +52,8 @@ func _on_player_entered_finish_line():
 	await get_tree().create_timer(0.5).timeout
 	applyRandomModifier()
 	
-func _on_modifier_added(objectPath: String, amountToSpawn: int):
-	spawnObjects(objectPath, amountToSpawn)
+func _on_modifier_added(objectPath: String, amountToSpawn: int, scaleModifier: float):
+	spawnObjects(objectPath, amountToSpawn, scaleModifier)
 
 func applyRandomModifier() -> void:
 	if (Modifiers.modifierPaths.size() > 0):

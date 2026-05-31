@@ -1,3 +1,3 @@
 extends Node
 
-signal modifierAdded(objectPath: String, amountToSpawn: int)
+signal modifierAdded(objectPath: String, amountToSpawn: int, scaleModifier: float)

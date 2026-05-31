@@ -4,25 +4,19 @@
 [ext_resource type="Script" uid="uid://b62j70ep00oqs" path="res://Assets/Models/Cow/cow.gd" id="2_o5nmr"]
 [ext_resource type="AudioStream" uid="uid://6ag66734y7uf" path="res://Assets/Audio/Sound Effects/Moo/moo.wav" id="3_86w21"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_ldwsv"]
-size = Vector3(3.4177036, 7.4317017, 13.654572)
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_86w21"]
 size = Vector3(3.6989746, 7.937561, 13.770264)
 
-[node name="Cow" unique_id=203411567 instance=ExtResource("1_ldwsv")]
+[sub_resource type="BoxShape3D" id="BoxShape3D_ldwsv"]
+size = Vector3(3.4177036, 7.4317017, 13.654572)
+
+[node name="Cow" unique_id=449281969 instance=ExtResource("1_ldwsv")]
 script = ExtResource("2_o5nmr")
 
-[node name="Cow_mesh" parent="." index="0" unique_id=1925140223]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+[node name="Cow_mesh" parent="." index="0" unique_id=499183037]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Cow_mesh" index="0" unique_id=1668887618]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Cow_mesh/StaticBody3D" index="0" unique_id=944157590]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0033063889, 3.7100825, 0.010299683)
-shape = SubResource("BoxShape3D_ldwsv")
-
-[node name="Area3D" type="Area3D" parent="Cow_mesh" index="1" unique_id=911734689]
+[node name="Area3D" type="Area3D" parent="Cow_mesh" index="0" unique_id=911734689]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Cow_mesh/Area3D" index="0" unique_id=1789756332]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.10632324, 3.4687805, -0.0072021484)
@@ -30,5 +24,9 @@ shape = SubResource("BoxShape3D_86w21")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="1" unique_id=1218618477]
 stream = ExtResource("3_86w21")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="2" unique_id=944157590]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.0016531944, 1.8550413, 0.0051498413)
+shape = SubResource("BoxShape3D_ldwsv")
 
 [connection signal="body_entered" from="Cow_mesh/Area3D" to="." method="_on_area_3d_body_entered"]
