@@ -73,5 +73,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.147512, 3.2007906, -135.99
 [connection signal="transitioningOut" from="." to="UI/FadeCircle" method="_on_map_main_transitioning_out"]
 [connection signal="enteredFallPlane" from="Player" to="." method="_on_player_entered_fall_plane"]
 [connection signal="enteredFinishLine" from="Player" to="." method="_on_player_entered_finish_line"]
+[connection signal="body_entered" from="FallPlane" to="." method="_on_fall_plane_body_entered"]
 [connection signal="body_entered" from="FallPlane" to="Player" method="_on_fall_plane_body_entered"]
 [connection signal="body_entered" from="FinishLine/AreaFinishLine" to="Player" method="_on_area_finish_line_body_entered"]

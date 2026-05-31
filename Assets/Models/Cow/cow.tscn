@@ -10,7 +10,7 @@ size = Vector3(3.6989746, 7.937561, 13.770264)
 [sub_resource type="BoxShape3D" id="BoxShape3D_ldwsv"]
 size = Vector3(3.4177036, 7.4317017, 13.654572)
 
-[node name="Cow" unique_id=449281969 instance=ExtResource("1_ldwsv")]
+[node name="Cow" unique_id=449281969 groups=["ModifierObject"] instance=ExtResource("1_ldwsv")]
 script = ExtResource("2_o5nmr")
 
 [node name="Cow_mesh" parent="." index="0" unique_id=499183037]

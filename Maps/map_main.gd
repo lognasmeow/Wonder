@@ -62,3 +62,8 @@ func applyRandomModifier() -> void:
 		var modifier = load(randModifierPath).instantiate()
 		add_child(modifier)
 		Modifiers.modifierPaths.remove_at(randValue)
+
+
+func _on_fall_plane_body_entered(body):
+	if body.is_in_group("ModifierObject"):
+		body.queue_free()
