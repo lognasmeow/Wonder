@@ -9,9 +9,14 @@ signal transitioningOut
 signal transitioningIn
 
 func _ready():
+	spawnObjects("res://Assets/Models/Cow/cow.tscn", 10)
+	connectModifierSignals()
 	player.global_position = playerSpawnPoint.global_position
 	transitioningIn.emit()
 	await get_tree().create_timer(0.5).timeout
+	
+func connectModifierSignals() -> void:
+	EventBus.modifierAdded.connect(_on_modifier_added)
 	
 func spawnObjects(objectPath: String, amountToSpawn: int) -> void:
 	var objectToSpawn = load(objectPath)
@@ -41,6 +46,9 @@ func _on_player_entered_finish_line():
 	transitioningIn.emit()
 	await get_tree().create_timer(0.5).timeout
 	applyRandomModifier()
+	
+func _on_modifier_added(objectPath: String, amountToSpawn: int):
+	spawnObjects(objectPath, amountToSpawn)
 
 func applyRandomModifier() -> void:
 	if (Modifiers.modifierPaths.size() > 0):

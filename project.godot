@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Modifiers="*uid://c7ilfv3xrl4ro"
+EventBus="*uid://nx7ldnink0gj"
 
 [display]
 
