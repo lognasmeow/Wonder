@@ -5,3 +5,9 @@ signal modifierAdded(objectPath: String, amountToSpawn: int, scaleModifier: floa
 
 @warning_ignore("unused_signal")
 signal speedBoostTouched
+
+@warning_ignore("unused_signal")
+signal spikesModifierAdded
+
+@warning_ignore("unused_signal")
+signal playerSquished

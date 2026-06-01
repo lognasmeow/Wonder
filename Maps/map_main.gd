@@ -16,6 +16,7 @@ func _ready():
 	
 func connectModifierSignals() -> void:
 	EventBus.modifierAdded.connect(_on_modifier_added)
+	EventBus.spikesModifierAdded.connect(_on_spikes_modifier_added)
 	
 func spawnObjects(objectPath: String, amountToSpawn: int, scaleModifier: float, yOffset: float) -> void:
 	var objectToSpawn = load(objectPath)
@@ -67,3 +68,6 @@ func applyRandomModifier() -> void:
 func _on_fall_plane_body_entered(body):
 	if body.is_in_group("ModifierObject"):
 		body.queue_free()
+
+func _on_spikes_modifier_added():
+	get_node("ModSpikes").squish()

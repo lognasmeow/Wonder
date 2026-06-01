@@ -15,6 +15,7 @@ func _ready():
 
 func connectModifierSignals() -> void:
 	EventBus.speedBoostTouched.connect(_on_speed_boost_touched)
+	EventBus.playerSquished.connect(_on_player_squished)
 
 func _physics_process(delta):
 	addGravity(delta)
@@ -61,3 +62,6 @@ func _on_speed_boost_touched():
 
 func _on_timer_speed_boost_timeout():
 	speedMultiplier = 1.0
+	
+func _on_player_squished():
+	enteredFallPlane.emit()
