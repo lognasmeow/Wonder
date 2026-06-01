@@ -27,5 +27,6 @@ func resetModifierPaths() -> void:
 					"res://Modifiers/IcyFloor/Mod_IcyFloor.tscn",
 					"res://Modifiers/DecreasedGravity/Mod_DecreasedGravity.tscn",
 					"res://Modifiers/MyCat/Mod_MyCat.tscn",
-					"res://Modifiers/Cows/Mod_Cows.tscn"
+					"res://Modifiers/Cows/Mod_Cows.tscn",
+					"res://Assets/Models/SpeedBoost/speedBoost.tscn",
 					]

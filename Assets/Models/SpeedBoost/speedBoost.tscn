@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://c3sq5y6n8jkbe"]
+
+[ext_resource type="PackedScene" uid="uid://bk33schhy2k18" path="res://Assets/Models/SpeedBoost/arrow.glb" id="1_n7fuq"]
+[ext_resource type="Script" uid="uid://7vjb662ryi53" path="res://Assets/Models/SpeedBoost/speed_boost.gd" id="2_n81wm"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n81wm"]
+size = Vector3(2.0092773, 1, 0.02520752)
+
+[node name="SpeedBoost" unique_id=292917688 groups=["Collectable", "Persistent"] instance=ExtResource("1_n7fuq")]
+script = ExtResource("2_n81wm")
+
+[node name="Sketchfab_model" parent="." index="0" unique_id=159667351]
+transform = Transform3D(-4.371139e-08, 4.371139e-08, -1, 1, 1.9106855e-15, -4.371139e-08, 0, -1, -4.371139e-08, 0, 0.85361385, 0)
+
+[node name="Plane" parent="Sketchfab_model/ARROW_fbx/RootNode" parent_id_path=PackedInt32Array(289478532) index="0" unique_id=1279023492]
+transform = Transform3D(487.41354, 4.5474735e-13, 1.6263033e-19, 0, -100, -1.509958e-05, -1.0842022e-19, 1.509958e-05, -100, 104.44647, 2.2136483, 92.489235)
+
+[node name="Plane_Material_0" parent="Sketchfab_model/ARROW_fbx/RootNode/Plane" index="0" unique_id=295985445]
+transform = Transform3D(0.3, 0, 0, 0, 0.395, 0, 0, 0, 12, 0, 0, 0)
+
+[node name="Area3D" type="Area3D" parent="Sketchfab_model/ARROW_fbx/RootNode/Plane/Plane_Material_0" index="0" unique_id=185930825]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/ARROW_fbx/RootNode/Plane/Plane_Material_0/Area3D" index="0" unique_id=895775847]
+transform = Transform3D(1, 1.1278813e-28, -3.6971094e-18, 4.2632564e-14, 1, -1.364242e-12, -1.8819598e-20, 0, 1, 0.00048840046, 4.0978193e-08, -0.011199899)
+shape = SubResource("BoxShape3D_n81wm")
+
+[connection signal="body_entered" from="Sketchfab_model/ARROW_fbx/RootNode/Plane/Plane_Material_0/Area3D" to="." method="_on_area_3d_body_entered"]

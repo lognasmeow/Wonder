@@ -36,3 +36,8 @@ material = SubResource("ShaderMaterial_btcbx")
 offset_right = 640.0
 offset_bottom = 480.0
 mouse_filter = 2
+
+[node name="timerSpeedBoost" type="Timer" parent="." unique_id=599639717]
+wait_time = 1.5
+
+[connection signal="timeout" from="timerSpeedBoost" to="." method="_on_timer_speed_boost_timeout"]
