@@ -2,10 +2,13 @@
 
 [ext_resource type="Script" uid="uid://ds0rvnc6dahpe" path="res://Player/player.gd" id="1_l8h54"]
 [ext_resource type="Shader" uid="uid://c56ivxe0itki3" path="res://Assets/Shaders/crt.gdshader" id="2_4ntmi"]
+[ext_resource type="PackedScene" uid="uid://bd0h23but64ou" path="res://Player/main_character_skin.tscn" id="3_btcbx"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_hvfyp"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_l8h54"]
+radius = 0.5888672
+height = 1.8110352
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_btcbx"]
 shader = ExtResource("2_4ntmi")
@@ -21,9 +24,11 @@ shader_parameter/brightness_boost = 1.2
 script = ExtResource("1_l8h54")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=64000787]
+visible = false
 mesh = SubResource("CapsuleMesh_hvfyp")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=618108973]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.053955078, 0)
 shape = SubResource("CapsuleShape3D_l8h54")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=117122045]
@@ -45,5 +50,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.791206, -0.4626284)
 spring_length = 10.0
 
 [node name="Camera3D" type="Camera3D" parent="CameraPivot/SpringArm3D" unique_id=1414429753]
+
+[node name="mainCharacterSkin" parent="." unique_id=1195022280 instance=ExtResource("3_btcbx")]
+transform = Transform3D(-0.475, 0, -4.152582e-08, 0, 0.475, 0, 4.152582e-08, 0, -0.475, 0, -0.82019186, 0)
 
 [connection signal="timeout" from="timerSpeedBoost" to="." method="_on_timer_speed_boost_timeout"]
