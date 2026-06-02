@@ -11,3 +11,7 @@ signal spikesModifierAdded
 
 @warning_ignore("unused_signal")
 signal playerSquished
+
+
+func _ready():
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED

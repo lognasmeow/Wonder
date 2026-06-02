@@ -40,7 +40,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6951053, 45.02008)
 [node name="ArenaMain" parent="." unique_id=1776905858 instance=ExtResource("1_jvluu")]
 
 [node name="Marker3D_PlayerSpawn" type="Marker3D" parent="." unique_id=1223064160]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6785837, 45.02707)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6785837, 42.91668)
 
 [node name="FallPlane" parent="." unique_id=510512870 instance=ExtResource("5_3721q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.2877274, -51.90043)
