@@ -35,7 +35,7 @@ offset_bottom = 480.0
 mouse_filter = 2
 
 [node name="timerSpeedBoost" type="Timer" parent="." unique_id=599639717]
-wait_time = 1.5
+wait_time = 2.0
 
 [node name="CameraPivot" type="Node3D" parent="." unique_id=899903014]
 transform = Transform3D(1, 0, 0, 0, 0.8443279, 0.5358268, 0, -0.5358268, 0.8443279, 0, 0.45626765, 0)
