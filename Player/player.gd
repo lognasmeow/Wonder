@@ -39,10 +39,13 @@ func getCameraInputDirection(event: InputEvent) -> void:
 	cameraInputDirection = event.screen_relative * mouseSensitivity
 	
 func handleCameraMovement(delta: float) -> void:
-	#cameraPivot.rotation.x += cameraInputDirection.y * delta
+	#cameraPivot.rotation.x -= cameraInputDirection.y * delta
 	#cameraPivot.rotation.x = clamp(cameraPivot.rotation.x, deg_to_rad(-40), deg_to_rad(10))
 	
-	cameraPivot.rotation.y -= cameraInputDirection.x * delta
+	if (Modifiers.invertedMouse):
+		cameraPivot.rotation.y += cameraInputDirection.x * delta
+	else:
+		cameraPivot.rotation.y -= cameraInputDirection.x * delta
 	
 	cameraInputDirection = Vector2.ZERO
 #endregion
