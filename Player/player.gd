@@ -4,7 +4,8 @@ extends CharacterBody3D
 @onready var cameraPivot: Node3D = $CameraPivot
 @onready var camera: Camera3D = $CameraPivot/SpringArm3D/Camera3D
 @onready var mainCharacterSkin: Node3D = $mainCharacterSkin
-@onready var animationPlayer: AnimationPlayer = $mainCharacterSkin/AnimationPlayer
+@onready var animationTree: AnimationTree = $mainCharacterSkin/AnimationTree
+
 
 @export_group("Camera")
 @export_range(0.0, 1.0) var mouseSensitivity: float = 0.15
@@ -14,6 +15,8 @@ const SPEED = 8.0
 const JUMP_VELOCITY = 15
 
 var speedMultiplier: float = 1.0
+var walkAnimationCurrentBlendPosition: float = -1.0
+var isJumping: bool = false
 
 signal enteredFallPlane
 signal enteredFinishLine
@@ -59,21 +62,36 @@ func addGravity(delta: float) -> void:
 	if not is_on_floor():
 		velocity += ((get_gravity() * 4) * Modifiers.gravityMultiplier) * delta
 		
-func handleJump() -> void:
+func handleJump() -> void:	
+	handleLand()
+	
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = (JUMP_VELOCITY * Modifiers.jumpHeightMultiplier)
+		animationTree.set("parameters/jump/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
+		isJumping = true
+	
+func handleLand() -> void:
+	if (isJumping and !animationTree.get("parameters/jump/active")):
+		isJumping = false
+		animationTree.set("parameters/land/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
 
 func handleMove() -> void:
 	var direction: Vector3 = getMovementDirection()
 	
 	if direction:
+		walkAnimationCurrentBlendPosition += 0.1
+		walkAnimationCurrentBlendPosition = clamp(walkAnimationCurrentBlendPosition, -1.0, 1.0)
 		if (is_on_floor()):
+			animationTree.set("parameters/movement/blend_position", walkAnimationCurrentBlendPosition)
 			velocity.x = lerp(velocity.x, direction.x * (SPEED * speedMultiplier), Modifiers.floorIciness) 
 			velocity.z = lerp(velocity.z, direction.z * (SPEED * speedMultiplier), Modifiers.floorIciness)
 	else:
+		walkAnimationCurrentBlendPosition -= 0.1
+		walkAnimationCurrentBlendPosition = clamp(walkAnimationCurrentBlendPosition, -1.0, 1.0)
 		if (is_on_floor()):
 			velocity.x = lerp(velocity.x, move_toward(velocity.x, 0, (SPEED * speedMultiplier)), Modifiers.floorIciness)
 			velocity.z = lerp(velocity.z, move_toward(velocity.z, 0, (SPEED * speedMultiplier)), Modifiers.floorIciness)
+		animationTree.set("parameters/movement/blend_position", walkAnimationCurrentBlendPosition)
 			
 func getMovementDirection() -> Vector3:
 	var input_dir = Input.get_vector("left", "right", "up", "down") \
@@ -88,7 +106,7 @@ func getMovementDirection() -> Vector3:
 #endregion
 
 #region Animations
-
+	
 #endregion
 
 func _on_fall_plane_body_entered(body):
