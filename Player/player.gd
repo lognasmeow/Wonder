@@ -4,6 +4,7 @@ extends CharacterBody3D
 @onready var cameraPivot: Node3D = $CameraPivot
 @onready var camera: Camera3D = $CameraPivot/SpringArm3D/Camera3D
 @onready var mainCharacterSkin: Node3D = $mainCharacterSkin
+@onready var animationPlayer: AnimationPlayer = $mainCharacterSkin/AnimationPlayer
 
 @export_group("Camera")
 @export_range(0.0, 1.0) var mouseSensitivity: float = 0.15
@@ -19,7 +20,7 @@ signal enteredFinishLine
 
 func _ready():
 	connectModifierSignals()
-	mainCharacterSkin.animationPlayer.play("Run")
+	#playAnimation("Idle")
 
 func connectModifierSignals() -> void:
 	EventBus.speedBoostTouched.connect(_on_speed_boost_touched)
@@ -87,6 +88,11 @@ func getMovementDirection() -> Vector3:
 	return direction.normalized()
 #endregion
 
+#region Animations
+func playAnimation(animationToPlay: String) -> void:
+	animationPlayer.play(animationToPlay)
+	animationPlayer.current_animation
+#endregion
 
 func _on_fall_plane_body_entered(body):
 	if (body.name == "Player"):
