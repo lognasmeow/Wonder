@@ -5,6 +5,8 @@ extends CharacterBody3D
 @onready var camera: Camera3D = $CameraPivot/SpringArm3D/Camera3D
 @onready var mainCharacterSkin: Node3D = $mainCharacterSkin
 @onready var animationTree: AnimationTree = $mainCharacterSkin/AnimationTree
+@onready var sfxJump: AudioStreamPlayer = $sfxJump
+@onready var sfxLand: AudioStreamPlayer = $sfxLand
 
 
 @export_group("Camera")
@@ -66,6 +68,7 @@ func handleJump() -> void:
 	handleLand()
 	
 	if Input.is_action_just_pressed("jump") and is_on_floor():
+		sfxJump.play()
 		velocity.y = (JUMP_VELOCITY * Modifiers.jumpHeightMultiplier)
 		animationTree.set("parameters/jump/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
 		isJumping = true
@@ -103,10 +106,6 @@ func getMovementDirection() -> Vector3:
 	var direction = (cameraRelativeForward * input_dir.y + cameraRelativeRight * input_dir.x)
 	direction.y = 0.0
 	return direction.normalized()
-#endregion
-
-#region Animations
-	
 #endregion
 
 func _on_fall_plane_body_entered(body):

@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b7ueai68mlg27" path="res://Functional Areas/FinishLine/Area_FinishLine.tscn" id="6_rhhk7"]
 [ext_resource type="PackedScene" uid="uid://crhtgwpy542xa" path="res://Assets/Models/Finish Line/finishLine.tscn" id="7_uov7h"]
 [ext_resource type="PackedScene" uid="uid://bb4grpuxtpb3k" path="res://UI/Transitions/FadeCircle/FadeCircle.tscn" id="8_0in5n"]
+[ext_resource type="AudioStream" uid="uid://ct2uyhb3r0sxo" path="res://Audio/Music/town.wav" id="9_m4ext"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_1q4cs"]
 panorama = ExtResource("1_jf03b")
@@ -68,6 +69,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.45823, 3.2007911, 34.3210
 
 [node name="Marker_ObjectCorner2" type="Marker3D" parent="ObjectRegion" unique_id=1393301345]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.147512, 3.2007906, -135.99991)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1968756557]
+stream = ExtResource("9_m4ext")
+autoplay = true
 
 [connection signal="transitioningIn" from="." to="UI/FadeCircle" method="_on_map_main_transitioning_in"]
 [connection signal="transitioningOut" from="." to="UI/FadeCircle" method="_on_map_main_transitioning_out"]
