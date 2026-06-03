@@ -20,7 +20,6 @@ signal enteredFinishLine
 
 func _ready():
 	connectModifierSignals()
-	#playAnimation("Idle")
 
 func connectModifierSignals() -> void:
 	EventBus.speedBoostTouched.connect(_on_speed_boost_touched)
@@ -89,9 +88,7 @@ func getMovementDirection() -> Vector3:
 #endregion
 
 #region Animations
-func playAnimation(animationToPlay: String) -> void:
-	animationPlayer.play(animationToPlay)
-	animationPlayer.current_animation
+
 #endregion
 
 func _on_fall_plane_body_entered(body):
