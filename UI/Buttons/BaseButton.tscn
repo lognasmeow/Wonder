@@ -9,7 +9,7 @@
 default_font = ExtResource("1_cn73p")
 
 [node name="BaseButton" type="Button" unique_id=74916123]
-custom_minimum_size = Vector2(220, 0)
+custom_minimum_size = Vector2(220, 30)
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
