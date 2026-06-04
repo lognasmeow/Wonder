@@ -12,7 +12,7 @@ func _ready():
 	connectModifierSignals()
 	player.global_position = playerSpawnPoint.global_position
 	transitioningIn.emit()
-	await get_tree().create_timer(1.0).timeout
+	await get_tree().create_timer(0.5).timeout
 	
 func connectModifierSignals() -> void:
 	EventBus.modifierAdded.connect(_on_modifier_added)
