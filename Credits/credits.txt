@@ -1,5 +1,6 @@
 *** SHADERS ***
 - pxlforge (CRT Shader) - (https://godotshaders.com/shader/lightweight-crt-effect/)
+- Edge Lord (Blur Shader) - (https://godotshaders.com/shader/gaussian-blur-for-godot-4-3-canvase-layer/)
 
 *** HDRIs ***
 - Dimitrios Savva (https://polyhaven.com/a/ferndale_studio_12)

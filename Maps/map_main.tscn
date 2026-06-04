@@ -8,7 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://b7ueai68mlg27" path="res://Functional Areas/FinishLine/Area_FinishLine.tscn" id="6_rhhk7"]
 [ext_resource type="PackedScene" uid="uid://crhtgwpy542xa" path="res://Assets/Models/Finish Line/finishLine.tscn" id="7_uov7h"]
 [ext_resource type="PackedScene" uid="uid://bb4grpuxtpb3k" path="res://UI/Transitions/FadeCircle/FadeCircle.tscn" id="8_0in5n"]
+[ext_resource type="Shader" uid="uid://dietcp70hngj6" path="res://Assets/Shaders/blur.gdshader" id="9_8h8kj"]
 [ext_resource type="AudioStream" uid="uid://ct2uyhb3r0sxo" path="res://Audio/Music/town.wav" id="9_m4ext"]
+[ext_resource type="PackedScene" uid="uid://md6fe2xfdfuq" path="res://UI/Screens/PauseMenu/pausemenu.tscn" id="9_r6fxk"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_1q4cs"]
 panorama = ExtResource("1_jf03b")
@@ -26,6 +28,14 @@ tonemap_mode = 2
 ssao_enabled = true
 ssao_radius = 16.0
 glow_enabled = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qo7uw"]
+shader = ExtResource("9_8h8kj")
+shader_parameter/blur_radius = 16
+shader_parameter/blur_strength = 10.0
+shader_parameter/fade_direction = 0
+shader_parameter/fade_cutoff = 1.0
+shader_parameter/fade_intensity = 2.0
 
 [node name="MapMain" type="Node3D" unique_id=1293976605]
 script = ExtResource("1_1q4cs")
@@ -63,6 +73,18 @@ offset_right = 640.0
 offset_bottom = 480.0
 
 [node name="FadeCircle" parent="UI" unique_id=442821733 instance=ExtResource("8_0in5n")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="UI" unique_id=926422007]
+
+[node name="Blur" type="ColorRect" parent="UI/CanvasLayer" unique_id=1360780439]
+visible = false
+material = SubResource("ShaderMaterial_qo7uw")
+offset_right = 640.0
+offset_bottom = 480.0
+mouse_filter = 2
+
+[node name="Pausemenu" parent="UI" unique_id=1618743375 instance=ExtResource("9_r6fxk")]
+layout_mode = 1
 
 [node name="ObjectRegion" type="Node3D" parent="." unique_id=114219145]
 
