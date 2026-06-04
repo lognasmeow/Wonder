@@ -1,6 +1,11 @@
 [gd_scene format=3 uid="uid://ck52lgl2grobf"]
 
 [ext_resource type="Script" uid="uid://dyasqf3h3fkdc" path="res://UI/Transitions/RespawnText/respawn_text.gd" id="1_q4p75"]
+[ext_resource type="PackedScene" uid="uid://bvi6yx7ga5v30" path="res://UI/Backgrounds/scrollingTexture.tscn" id="2_jdc3j"]
+[ext_resource type="FontFile" uid="uid://s7msjk7g7k5i" path="res://Assets/Fonts/Peaberry-Base.otf" id="3_44s3g"]
+
+[sub_resource type="Theme" id="Theme_7cipp"]
+default_font = ExtResource("3_44s3g")
 
 [node name="RespawnText" type="Control" unique_id=2001583575]
 layout_mode = 3
@@ -10,3 +15,37 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_q4p75")
+
+[node name="TextureRect" parent="." unique_id=1435650758 instance=ExtResource("2_jdc3j")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.25
+offset_top = -82.75
+offset_right = 237.25
+offset_bottom = 82.75
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="TextureRect" unique_id=1516242678]
+
+[node name="Label" type="Label" parent="TextureRect/CanvasLayer" unique_id=2087526192]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -132.0
+offset_top = -22.0
+offset_right = 132.0
+offset_bottom = 22.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_7cipp")
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 0)
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 48
+text = "TEST LABEL"
