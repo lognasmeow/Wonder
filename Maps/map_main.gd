@@ -5,6 +5,7 @@ extends Node3D
 @onready var objectCorner1: Marker3D = $ObjectRegion/Marker_ObjectCorner1
 @onready var objectCorner2: Marker3D = $ObjectRegion/Marker_ObjectCorner2
 @onready var blur: ColorRect = $UI/Blur
+@onready var pauseMenu: Control = $UI/Pausemenu
 
 signal transitioningOut
 signal transitioningIn
@@ -22,10 +23,12 @@ func _input(event):
 	
 func pauseGame() -> void:
 	blur.visible = true
+	pauseMenu.show()
 	get_tree().paused = true
 
 func unpauseGame() -> void:
 	blur.visible = false
+	pauseMenu.hide()
 	get_tree().paused = false
 	
 func connectModifierSignals() -> void:

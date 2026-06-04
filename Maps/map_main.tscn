@@ -85,6 +85,7 @@ mouse_filter = 2
 
 [node name="Pausemenu" parent="UI" unique_id=1618743375 instance=ExtResource("9_r6fxk")]
 process_mode = 2
+visible = false
 z_index = 1
 layout_mode = 1
 
