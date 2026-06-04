@@ -73,6 +73,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.45823, 3.2007911, 34.3210
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.147512, 3.2007906, -135.99991)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1968756557]
+process_mode = 3
 stream = ExtResource("9_m4ext")
 autoplay = true
 

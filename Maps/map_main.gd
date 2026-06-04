@@ -14,6 +14,17 @@ func _ready():
 	transitioningIn.emit()
 	await get_tree().create_timer(0.5).timeout
 	
+func _input(event):
+	if (event.is_action_pressed("ui_cancel")):
+		if (!get_tree().paused):
+			pauseGame()	
+	
+func pauseGame() -> void:
+	get_tree().paused = true
+
+func unpauseGame() -> void:
+	get_tree().paused = false
+	
 func connectModifierSignals() -> void:
 	EventBus.modifierAdded.connect(_on_modifier_added)
 	EventBus.spikesModifierAdded.connect(_on_spikes_modifier_added)
