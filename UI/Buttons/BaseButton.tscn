@@ -4,6 +4,7 @@
 [ext_resource type="StyleBox" uid="uid://bhert7kaqugjl" path="res://UI/Styles/button.tres" id="2_htgqm"]
 [ext_resource type="StyleBox" uid="uid://c2pih5cws0hiq" path="res://UI/Styles/buttonFocus.tres" id="3_tb3gk"]
 [ext_resource type="Script" uid="uid://e2tktgkcq5ma" path="res://UI/Buttons/base_button.gd" id="4_tb3gk"]
+[ext_resource type="AudioStream" uid="uid://cw4p0j7sffyff" path="res://Audio/Sound Effects/select.wav" id="5_p4my3"]
 
 [sub_resource type="Theme" id="Theme_hdqoq"]
 default_font = ExtResource("1_cn73p")
@@ -35,6 +36,9 @@ theme_override_styles/normal = ExtResource("2_htgqm")
 theme_override_styles/focus = ExtResource("3_tb3gk")
 text = "Placeholder"
 script = ExtResource("4_tb3gk")
+
+[node name="sfxSelect" type="AudioStreamPlayer" parent="." unique_id=1775403542]
+stream = ExtResource("5_p4my3")
 
 [connection signal="focus_entered" from="." to="." method="_on_focus_entered"]
 [connection signal="focus_exited" from="." to="." method="_on_focus_exited"]

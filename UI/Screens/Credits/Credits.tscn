@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://wqvebk3y21lv"]
+
+[ext_resource type="Script" uid="uid://dpd0olhv1yorf" path="res://UI/Screens/Credits/credits.gd" id="1_ktin2"]
+[ext_resource type="PackedScene" uid="uid://bvi6yx7ga5v30" path="res://UI/Backgrounds/scrollingTexture.tscn" id="1_tdfrp"]
+[ext_resource type="FontFile" uid="uid://s7msjk7g7k5i" path="res://Assets/Fonts/Peaberry-Base.otf" id="2_pbwey"]
+
+[sub_resource type="Theme" id="Theme_ktin2"]
+default_font = ExtResource("2_pbwey")
+
+[node name="Credits" type="Control" unique_id=794719832]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ktin2")
+
+[node name="TextureRect" parent="." unique_id=1435650758 instance=ExtResource("1_tdfrp")]
+modulate = Color(0.10686699, 0.2301833, 0.33444223, 1)
+layout_mode = 0
+mouse_filter = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=275248478]
+custom_minimum_size = Vector2(600, 460)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -20.0
+offset_right = 300.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_ktin2")
+theme_override_font_sizes/bold_font_size = 24
+bbcode_enabled = true
+text = "[center]
+
+[u][b]SHADERS[/b][/u]
+* pxlforge (CRT Shader) - (https://godotshaders.com/shader/lightweight-crt-effect/)
+* Edge Lord (Blur Shader) - (https://godotshaders.com/shader/gaussian-blur-for-godot-4-3-canvase-layer/)
+
+[u][b]HDRI[/b][/u]
+* Dimitrios Savva (https://polyhaven.com/a/ferndale_studio_12)
+* Greg Zaal (https://polyhaven.com/a/ferndale_studio_12)
+
+[u][b]MODELS[/b][/u]
+* Kemal Çolak (Finish Line) - (https://skfb.ly/oDuZz)
+* Cow by Poly by Google [CC-BY] via Poly Pizza
+* PropShop™ (Arrow) - (https://skfb.ly/oEtUY)
+* Bhushan (Main Character) - (https://skfb.ly/pERT7)
+
+[u][b]AUDIO[/b][/u]
+* Cow moo #8 by spurioustransients -- https://freesound.org/s/513565/ -- License: Creative Commons 0
+* chajamakesmusic (Background Music) - (https://chajamakesmusic.itch.io/cute-and-silly-rpg-music-pack)
+* Jesús Lastra (Jumping SFX) - (https://jalastram.itch.io/8-bit-jump-sound-effects)
+
+[/center]"

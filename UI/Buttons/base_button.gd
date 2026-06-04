@@ -1,5 +1,7 @@
 extends Button
 
+@onready var sfxSelect: AudioStreamPlayer = $sfxSelect
+
 @export var focusScale: Vector2 = Vector2(1.2, 1.2)
 @export var animationDuration: float = 0.05
 
@@ -21,6 +23,7 @@ func _on_focus_entered():
 	tween.tween_property(self, "custom_minimum_size", newCustomMinimumSize, animationDuration)
 
 func _on_focus_exited():
+	sfxSelect.play()
 	if tween:
 		tween.kill()
 	tween = create_tween()

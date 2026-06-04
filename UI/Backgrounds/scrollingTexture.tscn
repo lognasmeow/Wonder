@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bvi6yx7ga5v30"]
+
+[ext_resource type="Shader" uid="uid://d2opdhdffl43g" path="res://Assets/Shaders/backgroundScroll.gdshader" id="1_fc2n1"]
+[ext_resource type="Texture2D" uid="uid://bv0grgpwt0x7c" path="res://Assets/Textures/checkerboard.png" id="2_eajlw"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_uvf62"]
+shader = ExtResource("1_fc2n1")
+shader_parameter/speed = 0.15
+
+[node name="TextureRect" type="TextureRect" unique_id=1435650758]
+modulate = Color(0.32941177, 0.84313726, 0.61960787, 1)
+material = SubResource("ShaderMaterial_uvf62")
+offset_right = 640.0
+offset_bottom = 480.0
+texture = ExtResource("2_eajlw")
+stretch_mode = 1
