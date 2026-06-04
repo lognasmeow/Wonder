@@ -9,6 +9,8 @@ var newCustomMinimumSize: Vector2
 var tween: Tween
 
 func _ready():
+	if tween:
+		tween.kill()
 	defaultCustomMinimumSize = get("custom_minimum_size")
 	newCustomMinimumSize.x = defaultCustomMinimumSize.x * 1.2
 

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Wonder"
-run/main_scene="uid://b57ptewcyhlft"
+run/main_scene="uid://63vv873dho8l"
 config/features=PackedStringArray("4.6", "Forward Plus")
 run/max_fps=60
 config/icon="uid://by0m7nw25ftbv"
