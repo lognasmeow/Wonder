@@ -4,7 +4,8 @@
 [ext_resource type="Shader" uid="uid://c56ivxe0itki3" path="res://Assets/Shaders/crt.gdshader" id="2_4ntmi"]
 [ext_resource type="PackedScene" uid="uid://bd0h23but64ou" path="res://Player/main_character_skin.tscn" id="3_btcbx"]
 [ext_resource type="AudioStream" uid="uid://cxsguvr758s0r" path="res://Audio/Sound Effects/jump.wav" id="4_k53q1"]
-[ext_resource type="AudioStream" uid="uid://sjhn45vk83ej" path="res://Audio/Sound Effects/land.wav" id="5_fhl08"]
+[ext_resource type="AudioStream" uid="uid://bb5qxk4msl8p7" path="res://Audio/Sound Effects/SFX_Died_1.wav" id="5_fhl08"]
+[ext_resource type="AudioStream" uid="uid://bluapnmfutxa8" path="res://Audio/Sound Effects/SFX_Died_2.wav" id="6_vtle1"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_hvfyp"]
 
@@ -59,7 +60,10 @@ transform = Transform3D(-0.475, 0, -4.152582e-08, 0, 0.475, 0, 4.152582e-08, 0, 
 [node name="sfxJump" type="AudioStreamPlayer" parent="." unique_id=1377843850]
 stream = ExtResource("4_k53q1")
 
-[node name="sfxLand" type="AudioStreamPlayer" parent="." unique_id=961730456]
+[node name="sfxDied1" type="AudioStreamPlayer" parent="." unique_id=2037269901]
 stream = ExtResource("5_fhl08")
+
+[node name="sfxDied2" type="AudioStreamPlayer" parent="." unique_id=1614798095]
+stream = ExtResource("6_vtle1")
 
 [connection signal="timeout" from="timerSpeedBoost" to="." method="_on_timer_speed_boost_timeout"]

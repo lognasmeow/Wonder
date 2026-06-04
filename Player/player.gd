@@ -5,8 +5,10 @@ extends CharacterBody3D
 @onready var camera: Camera3D = $CameraPivot/SpringArm3D/Camera3D
 @onready var mainCharacterSkin: Node3D = $mainCharacterSkin
 @onready var animationTree: AnimationTree = $mainCharacterSkin/AnimationTree
+
 @onready var sfxJump: AudioStreamPlayer = $sfxJump
-@onready var sfxLand: AudioStreamPlayer = $sfxLand
+@onready var sfxDied1: AudioStreamPlayer = $sfxDied1
+@onready var sfxDied2: AudioStreamPlayer = $sfxDied2
 
 
 @export_group("Camera")
@@ -110,6 +112,8 @@ func getMovementDirection() -> Vector3:
 
 func _on_fall_plane_body_entered(body):
 	if (body.name == "Player"):
+		sfxDied1.play()
+		sfxDied2.play()
 		enteredFallPlane.emit()
 
 func _on_area_finish_line_body_entered(body):
