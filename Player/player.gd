@@ -9,13 +9,15 @@ extends CharacterBody3D
 @onready var sfxJump: AudioStreamPlayer = $sfxJump
 @onready var sfxDied1: AudioStreamPlayer = $sfxDied1
 @onready var sfxDied2: AudioStreamPlayer = $sfxDied2
+@onready var sfxVictory2: AudioStreamPlayer = $sfxVictory2
+@onready var sfxVictory3: AudioStreamPlayer = $sfxVictory3
 
 
 @export_group("Camera")
 @export_range(0.0, 1.0) var mouseSensitivity: float = 0.15
 var cameraInputDirection: Vector2 = Vector2.ZERO
 
-const SPEED = 8.0
+const SPEED = 118.0
 const JUMP_VELOCITY = 15
 
 var speedMultiplier: float = 1.0
@@ -118,6 +120,8 @@ func _on_fall_plane_body_entered(body):
 
 func _on_area_finish_line_body_entered(body):
 	if (body.name == "Player"):
+		sfxVictory2.play()
+		sfxVictory3.play()
 		enteredFinishLine.emit()
 		
 func _on_speed_boost_touched():
