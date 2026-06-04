@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://md6fe2xfdfuq"]
 
 [ext_resource type="Script" uid="uid://rk0rgwu58m7l" path="res://UI/Screens/PauseMenu/pausemenu.gd" id="1_cjdb5"]
+[ext_resource type="PackedScene" uid="uid://dm0y8xtnwu3av" path="res://UI/Buttons/BaseButton.tscn" id="2_o2c35"]
 
 [node name="Pausemenu" type="Control" unique_id=1618743375]
 layout_mode = 3
@@ -24,10 +25,13 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 50
 alignment = 1
 
-[node name="Button" type="Button" parent="VBoxContainer" unique_id=82420434]
+[node name="BaseButton" parent="VBoxContainer" unique_id=74916123 instance=ExtResource("2_o2c35")]
 layout_mode = 2
+text = "Resume"
 
-[node name="Button2" type="Button" parent="VBoxContainer" unique_id=840871634]
+[node name="BaseButton2" parent="VBoxContainer" unique_id=2000098978 instance=ExtResource("2_o2c35")]
 layout_mode = 2
+text = "Quit"
