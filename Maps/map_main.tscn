@@ -11,6 +11,7 @@
 [ext_resource type="Shader" uid="uid://dietcp70hngj6" path="res://Assets/Shaders/blur.gdshader" id="9_8h8kj"]
 [ext_resource type="AudioStream" uid="uid://ct2uyhb3r0sxo" path="res://Audio/Music/town.wav" id="9_m4ext"]
 [ext_resource type="PackedScene" uid="uid://md6fe2xfdfuq" path="res://UI/Screens/PauseMenu/pausemenu.tscn" id="9_r6fxk"]
+[ext_resource type="PackedScene" uid="uid://dpbu2d757n08p" path="res://UI/Transitions/FinishLineText/FinishLineText.tscn" id="11_qo7uw"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_1q4cs"]
 panorama = ExtResource("1_jf03b")
@@ -67,12 +68,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 22.991291, -141.70592)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9686413, -141.77754)
 
 [node name="UI" type="Control" parent="." unique_id=1671717937]
+z_index = -1
 layout_mode = 3
 anchors_preset = 0
 offset_right = 640.0
 offset_bottom = 480.0
 
+[node name="FinishLineText" parent="UI" unique_id=367601915 instance=ExtResource("11_qo7uw")]
+z_index = 10
+layout_mode = 1
+
 [node name="FadeCircle" parent="UI" unique_id=442821733 instance=ExtResource("8_0in5n")]
+layer = -3
 
 [node name="Blur" type="ColorRect" parent="UI" unique_id=1360780439]
 visible = false

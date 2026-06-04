@@ -6,6 +6,7 @@ extends Node3D
 @onready var objectCorner2: Marker3D = $ObjectRegion/Marker_ObjectCorner2
 @onready var blur: ColorRect = $UI/Blur
 @onready var pauseMenu: Control = $UI/Pausemenu
+@onready var finishLineText: Control = $UI/FinishLineText
 
 signal transitioningOut
 signal transitioningIn
@@ -67,9 +68,13 @@ func _on_player_entered_fall_plane():
 func _on_player_entered_finish_line():
 	transitioningOut.emit()
 	await get_tree().create_timer(1.0).timeout
+	finishLineText.moveText = true
+	await get_tree().create_timer(4.5).timeout
+	
 	player.global_position = playerSpawnPoint.global_position
 	transitioningIn.emit()
 	await get_tree().create_timer(1.0).timeout
+	
 	applyRandomModifier()
 	
 func _on_modifier_added(objectPath: String, amountToSpawn: int, scaleModifier: float, yOffset: float):

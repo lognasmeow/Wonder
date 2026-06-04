@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://dpbu2d757n08p"]
+
+[ext_resource type="Script" uid="uid://dyvwgg12fjfv7" path="res://UI/Transitions/FinishLineText/finish_line_text.gd" id="1_vg4ce"]
+[ext_resource type="FontFile" uid="uid://s7msjk7g7k5i" path="res://Assets/Fonts/Peaberry-Base.otf" id="1_yf748"]
+
+[sub_resource type="Theme" id="Theme_vg4ce"]
+default_font = ExtResource("1_yf748")
+
+[node name="FinishLineText" type="Control" unique_id=367601915]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vg4ce")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1879921102]
+custom_minimum_size = Vector2(600, 88.17)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_vg4ce")
+theme_override_colors/font_outline_color = Color(0.16576093, 0.43276763, 0.58764297, 1)
+theme_override_constants/outline_size = 15
+theme_override_font_sizes/normal_font_size = 29
+theme_override_font_sizes/bold_font_size = 15
+bbcode_enabled = true
+text = "[center]
+I [b]wonder[/b] what will be next....
+[/center]"
