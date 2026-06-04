@@ -9,6 +9,7 @@ extends Node3D
 
 signal transitioningOut
 signal transitioningIn
+signal pausing
 
 func _ready():
 	connectModifierSignals()
@@ -23,12 +24,13 @@ func _input(event):
 	
 func pauseGame() -> void:
 	blur.visible = true
-	pauseMenu.show()
+	pauseMenu.visible = true
+	pausing.emit()
 	get_tree().paused = true
 
 func unpauseGame() -> void:
 	blur.visible = false
-	pauseMenu.hide()
+	pauseMenu.visible = false
 	get_tree().paused = false
 	
 func connectModifierSignals() -> void:
@@ -88,3 +90,7 @@ func _on_fall_plane_body_entered(body):
 
 func _on_spikes_modifier_added():
 	get_node("ModSpikes").squish()
+
+
+func _on_pausemenu_resume_pressed():
+	unpauseGame()
