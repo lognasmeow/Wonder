@@ -12,7 +12,7 @@ func _ready():
 	connectModifierSignals()
 	player.global_position = playerSpawnPoint.global_position
 	transitioningIn.emit()
-	await get_tree().create_timer(0.5).timeout
+	await get_tree().create_timer(1.0).timeout
 	
 func connectModifierSignals() -> void:
 	EventBus.modifierAdded.connect(_on_modifier_added)
@@ -47,10 +47,10 @@ func _on_player_entered_fall_plane():
 
 func _on_player_entered_finish_line():
 	transitioningOut.emit()
-	await get_tree().create_timer(0.5).timeout
+	await get_tree().create_timer(1.0).timeout
 	player.global_position = playerSpawnPoint.global_position
 	transitioningIn.emit()
-	await get_tree().create_timer(0.5).timeout
+	await get_tree().create_timer(1.0).timeout
 	applyRandomModifier()
 	
 func _on_modifier_added(objectPath: String, amountToSpawn: int, scaleModifier: float, yOffset: float):
