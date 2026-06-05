@@ -43,7 +43,7 @@ shader_parameter/fade_intensity = 2.0
 script = ExtResource("1_1q4cs")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=312650139]
-transform = Transform3D(-0.51066303, -0.7445921, 0.42989045, 2.7805946e-08, 0.49999994, 0.86602545, -0.85978097, 0.44224703, -0.25533143, 0, 9.107522, 0)
+transform = Transform3D(-0.5106631, -0.74459213, 0.42989057, -0.35056785, 0.63687104, 0.6866566, -0.78506404, 0.1999444, -0.5862566, 0, 9.107522, 0)
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=867629201]
