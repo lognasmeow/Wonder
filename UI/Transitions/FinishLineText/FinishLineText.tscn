@@ -36,5 +36,5 @@ theme_override_font_sizes/normal_font_size = 29
 theme_override_font_sizes/bold_font_size = 15
 bbcode_enabled = true
 text = "[center]
-I [b]wonder[/b] what will be next....
+I [b]wonder[/b] what will happen next....
 [/center]"

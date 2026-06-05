@@ -160,7 +160,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="TextureRect" parent="Control" unique_id=1435650758 instance=ExtResource("2_jdc3j")]
-modulate = Color(0.4732895, 0.77390665, 0.9511866, 1)
+modulate = Color(0.8666667, 0.6431373, 0.28235295, 1)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

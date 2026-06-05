@@ -1,6 +1,37 @@
 [gd_scene format=3 uid="uid://6vki3n4jw28r"]
 
 [ext_resource type="Material" uid="uid://beq0a2kib8b62" path="res://Assets/Materials/material_checkerboard_main.tres" id="1_0u2aa"]
+[ext_resource type="Texture2D" uid="uid://bv0grgpwt0x7c" path="res://Assets/Textures/checkerboard.png" id="2_b1nsh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b1nsh"]
+albedo_color = Color(0.22352941, 0.18431373, 0.3529412, 1)
+albedo_texture = ExtResource("2_b1nsh")
+roughness = 0.7
+uv1_scale = Vector3(50, 50, 50)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j3yk7"]
+albedo_color = Color(0.22352941, 0.18431373, 0.3529412, 1)
+albedo_texture = ExtResource("2_b1nsh")
+roughness = 0.7
+uv1_scale = Vector3(50, 50, 50)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hwhb0"]
+albedo_color = Color(0.22352941, 0.18431373, 0.3529412, 1)
+albedo_texture = ExtResource("2_b1nsh")
+roughness = 0.7
+uv1_scale = Vector3(50, 50, 50)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jiye4"]
+albedo_color = Color(0.22352941, 0.18431373, 0.3529412, 1)
+albedo_texture = ExtResource("2_b1nsh")
+roughness = 0.7
+uv1_scale = Vector3(50, 50, 50)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kbr5b"]
+albedo_color = Color(0.22352941, 0.18431373, 0.3529412, 1)
+albedo_texture = ExtResource("2_b1nsh")
+roughness = 0.7
+uv1_scale = Vector3(50, 50, 50)
 
 [node name="ArenaMain" type="Node3D" unique_id=1776905858]
 
@@ -14,17 +45,17 @@ material = ExtResource("1_0u2aa")
 [node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1089044901]
 transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -31.954943, -24.877592, 0)
 size = Vector3(100, 1, 100)
-material = ExtResource("1_0u2aa")
+material = SubResource("StandardMaterial3D_b1nsh")
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="CSGCombiner3D" unique_id=2076399116]
 transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, -6.41374, -24.877592, 49.283035)
 size = Vector3(100, 1, 100)
-material = ExtResource("1_0u2aa")
+material = SubResource("StandardMaterial3D_j3yk7")
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="CSGCombiner3D" unique_id=244733637]
 transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 31.928745, -24.877592, 0)
 size = Vector3(100, 1, 100)
-material = ExtResource("1_0u2aa")
+material = SubResource("StandardMaterial3D_hwhb0")
 
 [node name="CSGBox3DSubtractive" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1905083331]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.582825, 0, 13.221781)
@@ -592,12 +623,12 @@ material = ExtResource("1_0u2aa")
 [node name="CSGBox3D6" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1769049764]
 transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -31.954943, -24.877592, -99.94077)
 size = Vector3(100, 1, 100)
-material = ExtResource("1_0u2aa")
+material = SubResource("StandardMaterial3D_jiye4")
 
 [node name="CSGBox3D7" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1082175614]
 transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 31.928745, -24.877592, -99.94077)
 size = Vector3(100, 1, 100)
-material = ExtResource("1_0u2aa")
+material = SubResource("StandardMaterial3D_kbr5b")
 
 [node name="CSGBox3DSubtractive94" type="CSGBox3D" parent="CSGCombiner3D" unique_id=865935639]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.582825, 0, -86.718994)

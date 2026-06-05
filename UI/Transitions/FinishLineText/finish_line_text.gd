@@ -15,4 +15,4 @@ func _process(_delta):
 		moveText = false
 
 func resetTextPosition() -> void:
-	richTextLabel.position.x = 550
+	richTextLabel.position.x = 600

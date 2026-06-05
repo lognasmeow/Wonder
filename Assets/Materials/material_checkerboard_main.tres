@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bv0grgpwt0x7c" path="res://Assets/Textures/checkerboard.png" id="1_v1smk"]
 
 [resource]
-albedo_color = Color(0.3307493, 0.84166306, 0.6209205, 1)
+albedo_color = Color(0.5019608, 0.92941177, 0.6, 1)
 albedo_texture = ExtResource("1_v1smk")
 roughness = 0.7
 uv1_scale = Vector3(50, 50, 50)
