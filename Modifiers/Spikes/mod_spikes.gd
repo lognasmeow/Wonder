@@ -7,7 +7,9 @@ var squishing: bool = false
 var squishSpeed: float = 0.01
 
 func _ready():
+	EventBus.modifierAdded.connect(_on_spikes_reload)
 	EventBus.spikesModifierAdded.emit()
+	squishing = true
 	
 func _process(_delta):
 	if (!squishing):
@@ -27,6 +29,9 @@ func _on_area_3d_left_body_entered(body):
 
 func _on_area_3d_right_body_entered(body):
 	collisionOccurred(body)
+	
+func _on_spikes_reload():
+	get_tree().reload_current_scene()
 
 func collisionOccurred(body) -> void:
 	if (body.name == "Player"):

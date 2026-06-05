@@ -76,7 +76,8 @@ func _on_player_entered_finish_line():
 	player.global_position = playerSpawnPoint.global_position
 	applyRandomModifier()
 	transitioningIn.emit()
-	await get_tree().create_timer(1.0).timeout
+	await get_tree().create_timer(1.0).timeout		
+		
 	
 func _on_modifier_added(objectPath: String, amountToSpawn: int, scaleModifier: float, yOffset: float):
 	spawnObjects(objectPath, amountToSpawn, scaleModifier, yOffset)	
