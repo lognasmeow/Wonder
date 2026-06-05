@@ -28,7 +28,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(663, 224)]
+"values": [Vector2(663, 206.59)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -40,7 +40,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(663, 273.46)]
+"values": [Vector2(663, 261.8)]
 }
 
 [sub_resource type="Animation" id="Animation_yhwct"]
@@ -68,7 +68,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(97, 224), Vector2(-487, 224)]
+"values": [Vector2(97, 206.59), Vector2(-487, 206.59)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -80,7 +80,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(97, 273.46), Vector2(-487, 273.46)]
+"values": [Vector2(97, 261.8), Vector2(-487, 261.8)]
 }
 
 [sub_resource type="Animation" id="Animation_44s3g"]
@@ -108,7 +108,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(663, 224), Vector2(97, 224)]
+"values": [Vector2(663, 206.59), Vector2(97, 206.59)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -120,7 +120,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(663, 273.46), Vector2(97, 273.46)]
+"values": [Vector2(663, 261.8), Vector2(97, 261.8)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7cipp"]
@@ -169,7 +169,7 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = 330.0
 offset_top = -64.37508
-offset_right = 804.4995
+offset_right = 804.49915
 offset_bottom = 64.37492
 grow_horizontal = 2
 grow_vertical = 2
@@ -183,7 +183,9 @@ anchor_top = 0.46666667
 anchor_right = 0.8484375
 anchor_bottom = 0.54583335
 offset_left = 566.0
-offset_right = 566.0022
+offset_top = -17.410004
+offset_right = 566.00195
+offset_bottom = -17.410004
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_7cipp")
@@ -203,9 +205,9 @@ anchor_top = 0.46666667
 anchor_right = 0.8484375
 anchor_bottom = 0.54583335
 offset_left = 566.0
-offset_top = 49.45999
-offset_right = 566.0022
-offset_bottom = 49.460052
+offset_top = 37.799988
+offset_right = 566.00195
+offset_bottom = 37.80005
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_7cipp")
