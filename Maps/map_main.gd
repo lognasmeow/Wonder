@@ -91,6 +91,7 @@ func applyRandomModifier() -> void:
 		Modifiers.modifierPaths.remove_at(randValue)
 	else:
 		respawnText.currentModifier = "Fun"
+		respawnText.lockInLabel.text = "(Locking in Optional)"
 
 
 func _on_fall_plane_body_entered(body):

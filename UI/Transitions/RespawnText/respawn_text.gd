@@ -3,6 +3,7 @@ extends Control
 @onready var textureRect: TextureRect = $Control/TextureRect
 @onready var animationPlayer: AnimationPlayer = $AnimationPlayer
 @onready var label: Label = $Control/CanvasLayer/Label
+@onready var lockInLabel: Label = $Control/CanvasLayer/Label2
 
 var currentModifier: String
 
@@ -10,6 +11,7 @@ func _ready():
 	resetTextPosition()
 	playModifierAnimation()
 	currentModifier = "Nothing"
+	lockInLabel.text = "Lock in!"
 	
 
 func resetTextPosition() -> void:
