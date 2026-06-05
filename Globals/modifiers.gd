@@ -35,16 +35,16 @@ func resetModifiers() -> void:
 
 func resetModifierPaths() -> void:
 	modifierPaths.clear()
-	#modifierPaths = ["res://Modifiers/IncreasedJumpHeight/Mod_IncreasedJumpHeight.tscn",
-					#"res://Modifiers/InvertedWalking/Mod_InvertedWalking.tscn",
-					#"res://Modifiers/InvertedMouse/Mod_InvertedMouse.tscn",
-					#"res://Modifiers/IcyFloor/Mod_IcyFloor.tscn",
-					#"res://Modifiers/DecreasedGravity/Mod_DecreasedGravity.tscn",
-					#"res://Modifiers/MyCat/Mod_MyCat.tscn",
-					#"res://Modifiers/Cows/Mod_Cows.tscn",
-					#"res://Modifiers/SpeedBoost/Mod_SpeedBoost.tscn",
+	modifierPaths = ["res://Modifiers/IncreasedJumpHeight/Mod_IncreasedJumpHeight.tscn",
+					"res://Modifiers/InvertedWalking/Mod_InvertedWalking.tscn",
+					"res://Modifiers/InvertedMouse/Mod_InvertedMouse.tscn",
+					"res://Modifiers/IcyFloor/Mod_IcyFloor.tscn",
+					"res://Modifiers/DecreasedGravity/Mod_DecreasedGravity.tscn",
+					"res://Modifiers/MyCat/Mod_MyCat.tscn",
+					"res://Modifiers/Cows/Mod_Cows.tscn",
+					"res://Modifiers/SpeedBoost/Mod_SpeedBoost.tscn",
+					#"res://Modifiers/Spikes/Mod_Spikes.tscn"
+					]
+	#modifierPaths = [
 					#"res://Modifiers/Spikes/Mod_Spikes.tscn"
 					#]
-	modifierPaths = [
-					"res://Modifiers/Spikes/Mod_Spikes.tscn"
-					]
