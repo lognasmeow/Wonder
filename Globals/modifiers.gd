@@ -8,6 +8,20 @@ var gravityMultiplier: float
 
 var modifierPaths: Array
 
+var modifierNames: Dictionary = {
+	"Nothing": "To the finish line!",
+	"ModCows": "Cows",
+	"ModDecreasedGravity": "Decreased Gravity",
+	"ModIcyFloor": "Icy Floor",
+	"ModDoubleJumpHeight": "Increased Jump Height",
+	"ModInvertedMouse": "Inverted Mouse",
+	"ModInvertedWalking": "Inverted Walking",
+	"ModMyCat": "My Cat",
+	"ModSpeedBoost": "Speed Boost",
+	"ModSpikes": "Spikes",
+	"Fun": "Have fun!"
+}
+
 func _ready():
 	resetModifiers()
 	resetModifierPaths()

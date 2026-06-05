@@ -17,7 +17,7 @@ extends CharacterBody3D
 @export_range(0.0, 1.0) var mouseSensitivity: float = 0.15
 var cameraInputDirection: Vector2 = Vector2.ZERO
 
-const SPEED = 8.0
+const SPEED = 118.0
 const JUMP_VELOCITY = 15
 
 var speedMultiplier: float = 1.0

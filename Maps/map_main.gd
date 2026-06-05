@@ -74,10 +74,9 @@ func _on_player_entered_finish_line():
 	await get_tree().create_timer(4.5).timeout
 	
 	player.global_position = playerSpawnPoint.global_position
+	applyRandomModifier()
 	transitioningIn.emit()
 	await get_tree().create_timer(1.0).timeout
-	
-	applyRandomModifier()
 	
 func _on_modifier_added(objectPath: String, amountToSpawn: int, scaleModifier: float, yOffset: float):
 	spawnObjects(objectPath, amountToSpawn, scaleModifier, yOffset)	
@@ -88,7 +87,10 @@ func applyRandomModifier() -> void:
 		var randModifierPath: String = Modifiers.modifierPaths[randValue]
 		var modifier = load(randModifierPath).instantiate()
 		add_child(modifier)
+		respawnText.currentModifier = modifier.name
 		Modifiers.modifierPaths.remove_at(randValue)
+	else:
+		respawnText.currentModifier = "Fun"
 
 
 func _on_fall_plane_body_entered(body):

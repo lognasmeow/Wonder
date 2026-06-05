@@ -4,9 +4,12 @@ extends Control
 @onready var animationPlayer: AnimationPlayer = $AnimationPlayer
 @onready var label: Label = $Control/CanvasLayer/Label
 
+var currentModifier: String
+
 func _ready():
 	resetTextPosition()
 	playModifierAnimation()
+	currentModifier = "Nothing"
 	
 
 func resetTextPosition() -> void:
@@ -15,6 +18,7 @@ func resetTextPosition() -> void:
 
 
 func _on_map_main_transitioning_in():
+	label.text = Modifiers.modifierNames.get(currentModifier)
 	playModifierAnimation()
 	
 func playModifierAnimation():
