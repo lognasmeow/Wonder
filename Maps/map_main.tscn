@@ -12,6 +12,7 @@
 [ext_resource type="AudioStream" uid="uid://ct2uyhb3r0sxo" path="res://Audio/Music/town.wav" id="9_m4ext"]
 [ext_resource type="PackedScene" uid="uid://md6fe2xfdfuq" path="res://UI/Screens/PauseMenu/pausemenu.tscn" id="9_r6fxk"]
 [ext_resource type="PackedScene" uid="uid://dpbu2d757n08p" path="res://UI/Transitions/FinishLineText/FinishLineText.tscn" id="11_qo7uw"]
+[ext_resource type="PackedScene" uid="uid://ck52lgl2grobf" path="res://UI/Transitions/RespawnText/RespawnText.tscn" id="12_0xa2y"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_1q4cs"]
 panorama = ExtResource("1_jf03b")
@@ -96,6 +97,9 @@ visible = false
 z_index = 1
 layout_mode = 1
 
+[node name="RespawnText" parent="UI" unique_id=2001583575 instance=ExtResource("12_0xa2y")]
+layout_mode = 1
+
 [node name="ObjectRegion" type="Node3D" parent="." unique_id=114219145]
 
 [node name="Marker_ObjectCorner1" type="Marker3D" parent="ObjectRegion" unique_id=1147219281]
@@ -111,6 +115,7 @@ autoplay = true
 
 [connection signal="pausing" from="." to="UI/Pausemenu" method="_on_map_main_pausing"]
 [connection signal="transitioningIn" from="." to="UI/FadeCircle" method="_on_map_main_transitioning_in"]
+[connection signal="transitioningIn" from="." to="UI/RespawnText" method="_on_map_main_transitioning_in"]
 [connection signal="transitioningOut" from="." to="UI/FadeCircle" method="_on_map_main_transitioning_out"]
 [connection signal="enteredFallPlane" from="Player" to="." method="_on_player_entered_fall_plane"]
 [connection signal="enteredFinishLine" from="Player" to="." method="_on_player_entered_finish_line"]

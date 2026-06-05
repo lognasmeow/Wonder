@@ -4,6 +4,96 @@
 [ext_resource type="PackedScene" uid="uid://bvi6yx7ga5v30" path="res://UI/Backgrounds/scrollingTexture.tscn" id="2_jdc3j"]
 [ext_resource type="FontFile" uid="uid://s7msjk7g7k5i" path="res://Assets/Fonts/Peaberry-Base.otf" id="3_44s3g"]
 
+[sub_resource type="Animation" id="Animation_7cipp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/TextureRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(350, -44.375)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Control/CanvasLayer/Label:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(663, 224)]
+}
+
+[sub_resource type="Animation" id="Animation_yhwct"]
+resource_name = "moveOutOfView"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/TextureRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-216, -44.375), Vector2(-800, -44.375)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Control/CanvasLayer/Label:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(97, 224), Vector2(-487, 224)]
+}
+
+[sub_resource type="Animation" id="Animation_44s3g"]
+resource_name = "moveToView"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/TextureRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(350, -44.375), Vector2(-216, -44.375)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Control/CanvasLayer/Label:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(663, 224), Vector2(97, 224)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7cipp"]
+_data = {
+&"RESET": SubResource("Animation_7cipp"),
+&"moveOutOfView": SubResource("Animation_yhwct"),
+&"moveToView": SubResource("Animation_44s3g")
+}
+
 [sub_resource type="Theme" id="Theme_7cipp"]
 default_font = ExtResource("3_44s3g")
 
@@ -16,36 +106,55 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_q4p75")
 
-[node name="TextureRect" parent="." unique_id=1435650758 instance=ExtResource("2_jdc3j")]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2083369666]
+libraries/ = SubResource("AnimationLibrary_7cipp")
+
+[node name="Control" type="Control" parent="." unique_id=618830251]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -237.25
-offset_top = -82.75
-offset_right = 237.25
-offset_bottom = 82.75
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.000153
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="CanvasLayer" type="CanvasLayer" parent="TextureRect" unique_id=1516242678]
-
-[node name="Label" type="Label" parent="TextureRect/CanvasLayer" unique_id=2087526192]
+[node name="TextureRect" parent="Control" unique_id=1435650758 instance=ExtResource("2_jdc3j")]
+modulate = Color(0.4732895, 0.77390665, 0.9511866, 1)
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -132.0
-offset_top = -22.0
-offset_right = 132.0
-offset_bottom = 22.0
+offset_left = 330.0
+offset_top = -64.37508
+offset_right = 804.4995
+offset_bottom = 64.37492
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Control" unique_id=1516242678]
+
+[node name="Label" type="Label" parent="Control/CanvasLayer" unique_id=2087526192]
+anchors_preset = -1
+anchor_left = 0.1515625
+anchor_top = 0.46666667
+anchor_right = 0.8484375
+anchor_bottom = 0.54583335
+offset_left = 566.0
+offset_right = 566.0022
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_7cipp")
-theme_override_colors/font_shadow_color = Color(1, 1, 1, 0)
+theme_override_colors/font_shadow_color = Color(0.2159017, 0.21590173, 0.2159017, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
 theme_override_constants/outline_size = 12
-theme_override_font_sizes/font_size = 48
-text = "TEST LABEL"
+theme_override_constants/shadow_outline_size = 11
+theme_override_font_sizes/font_size = 37
+text = "Increased Jump Height"

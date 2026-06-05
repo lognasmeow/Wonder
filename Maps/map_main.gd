@@ -4,9 +4,11 @@ extends Node3D
 @onready var player = $Player
 @onready var objectCorner1: Marker3D = $ObjectRegion/Marker_ObjectCorner1
 @onready var objectCorner2: Marker3D = $ObjectRegion/Marker_ObjectCorner2
+
 @onready var blur: ColorRect = $UI/Blur
 @onready var pauseMenu: Control = $UI/Pausemenu
 @onready var finishLineText: Control = $UI/FinishLineText
+@onready var respawnText: Control = $UI/RespawnText
 
 signal transitioningOut
 signal transitioningIn
